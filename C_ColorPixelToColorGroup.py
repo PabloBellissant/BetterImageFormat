@@ -26,9 +26,16 @@ def colorization(txt):
 def deColorization(txt):
     totalPixel = txt[0] * txt[1]
     withoutSize = txt[2]
-    print(withoutSize[1])
-    print(withoutSize[1][0])
-    for color in range(3):
-        for actualPixel in range(totalPixel-1):
-            print(color, )
 
+    print(withoutSize)
+    for color in range(3):
+        for actualFullPixel in range(totalPixel):
+            val = withoutSize[color][list(withoutSize[color])[actualFullPixel]]
+            if(val.__contains__(actualFullPixel)):
+                print(val, actualFullPixel)
+
+
+
+
+ss = (2,1,{0:{80:[0],100:[1]},1:{90:[0],130:[1]},2:{100:[0],4:[1]}})
+print(deColorization(ss))

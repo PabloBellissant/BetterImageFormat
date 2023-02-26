@@ -4,8 +4,8 @@
 
 
 
+bonjour = {80:2}
 
-bonjour = {0:{4:[10],15:[14,26,4852,17777]},1:{},2:{}}
 
-print(list(bonjour[0].values()))
-print(list(bonjour[0].values())[0].index(10))
+print(bonjour.get(80)) # get from key to value
+print(list(bonjour.keys())[list(bonjour.values()).index(2)])

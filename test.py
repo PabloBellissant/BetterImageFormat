@@ -1,11 +1,6 @@
 
 
 
+dict = {18:[0,1],19:[2,3]}
 
-
-
-bonjour = {80:2}
-
-
-print(bonjour.get(80)) # get from key to value
-print(list(bonjour.keys())[list(bonjour.values()).index(2)])
+print(list(dict.values())[0])

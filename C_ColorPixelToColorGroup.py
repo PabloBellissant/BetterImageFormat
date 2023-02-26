@@ -3,6 +3,7 @@
 
 
 def colorization(txt):
+    print(txt)
     newList = {0:{},1:{},2:{}}
     txt = list(txt)
     for color in range(3):
@@ -11,7 +12,7 @@ def colorization(txt):
             for n in range(len(txt)-2): #number of pixels.
                 if(txt[n+2][color] == p): # If actual pixel = color
                     if(p in newList[color]):
-                        newList[color][p].append(n+2)
+                        newList[color][p].append(n)
 
                     else:
                         newList[color][p] = [n]
@@ -36,7 +37,7 @@ def deColorization(txt):
                 fullDictList[y][withoutSize[y][list(withoutSize[y])[i]][p]] = list(withoutSize[y].keys())[list(withoutSize[y].values()).index(withoutSize[y][list(withoutSize[y])[i]])]
             i+=1
 
-    print(",",fullDictList)
+
     buildList = []
     for color in range(3):
         for allPixel in range(totalPixel):
@@ -47,8 +48,8 @@ def deColorization(txt):
     for i in range(len(buildList)): #Convert all list to tuple
         buildList[i] = tuple(buildList[i])
 
-    buildList.insert(0, txt[1]) # add size of image
-    buildList.insert(0, txt[0])
+    buildList.insert(0, txt[0]) # add size of image
+    buildList.insert(0, txt[1])
     return buildList
 
 

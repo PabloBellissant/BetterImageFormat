@@ -3,7 +3,6 @@
 
 
 def colorization(txt):
-    print(txt)
     newList = {0:{},1:{},2:{}}
     txt = list(txt)
     for color in range(3):

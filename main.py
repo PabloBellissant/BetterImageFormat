@@ -18,10 +18,12 @@ image = colorization(image)
 print("3", image)
 image = smooth(image)
 print("4", image)
+image = unSmooth(image)
+print("5", image)
 
 
-#image = deColorization(image)
+image = deColorization(image)
 
-#image = complexify(image)
+image = complexify(image)
 
-#image = build(image)
+image = build(image)

@@ -2,7 +2,6 @@
 
 
 
-str = "040-"
+str = "14+10/19"
 
-print(str.index("-"))
-print(len(str))
+print(str.index("/"))

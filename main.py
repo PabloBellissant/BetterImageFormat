@@ -9,7 +9,7 @@ from D_smoothPixel import smooth
 from D_smoothPixel import unSmooth
 
 
-image = open("image.jpg")
+image = open("imagebis.jpg")
 image = unBuild(image)
 #print("1", image)
 image = simplify(image)

@@ -1,7 +1,8 @@
 import random
 
 
-# From 10,11,12,14,15,16,18 ↦ 10-2,14-2,18
+# From 10,11,12,14,15,16,17,18,20 ↦ 10-0,14-2,20
+
 
 
 def simplify(list): # Private !
@@ -68,3 +69,5 @@ def unSmooth(txt):
             txtColor[color].update({actualIntensity:DeveloppePixel})
     finalList = [txt[0], txt[1], txtColor]
     return finalList
+
+

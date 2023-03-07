@@ -35,7 +35,28 @@ def toList(lst):
 
     return newLst
 
-def reverseList(str):
+def reverseList(string):
+    first = string[:string.index("_")]
+    valueRest = "/"+string[string.index("_")+1:]
+    print(valueRest)
+
+    dic = {}
+    colorList = [valueRest[:valueRest.index("/-")], valueRest[valueRest.index("/-")+2:]]
+    print("wow", colorList)
+    for i in range(valueRest.count("/")):
+        valueRest = valueRest[1:]
+        if(valueRest.__contains__("/")):
+            insideValue = valueRest[:valueRest.index("/")]
+            valueRest = valueRest[valueRest.index("/"):]
+
+        else:
+            insideValue = valueRest
+            print("here", insideValue)
+
+        preciseKey = insideValue[:insideValue.index("_")]
+        dic[preciseKey] = insideValue[insideValue.index("_")+1:]
+    print(dic)
+
 
 
 
@@ -46,4 +67,6 @@ def reverseList(str):
 
 listt = [17, 26, {0: {0: ['70-59', 138, 155], 136: ['142-', '153-', '156-41'], 153: ['25-', 45, 64], 237: ['132-3', '139-0', '144-6'], 255: ['0-22', '27-15', '46-15', '65-2', '200-239']}, 1: {0: ['70-59', 138, '142-', '153-44'], 28: ['132-3', '139-0', '144-6'], 217: ['25-', 45, 64], 255: ['0-22', '27-15', '46-15', '65-2', '200-239']}, 2: {0: ['70-59', 138, 155], 21: ['142-', '153-', '156-41'], 36: ['132-3', '139-0', '144-6'], 234: ['25-', 45, 64], 255: ['0-22', '27-15', '46-15', '65-2', '200-239']}}]
 print(listt)
-whatList = print(toList(listt))
+whatList = toList(listt)
+print(whatList)
+reverseList(whatList)

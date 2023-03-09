@@ -16,14 +16,17 @@ def deductableValue(firstValue, value): # "1458", "1465" ↦ 5 PRIVATE
 
     while(len(firstValue) < len(value)): firstValue = "0" + firstValue     # Both input has same length at this point
 
+
+
     for i in range(len(value)):
         if(firstValue[i] != value[i]):
-            valInside = i
-            if(valInside+1 < len(value) and valInside+1 < len(firstValue)):
-                if(int(firstValue[valInside]) + 1 == int(value[valInside]) and int(firstValue[valInside+1]) >= int(value[valInside+1])) :
-                    valInside += 1
-            value = value[valInside:]
+            valueIns = value[i:]
+            lenChange = len(valueIns)-1
+            if(int(firstValue) + 10**lenChange >= int(value)): return valueIns[1:]
+            else: return value[i:]
             break
+
+
 
     firstValue = firstValue + memFirstVal
     value = value + memVal
@@ -31,7 +34,7 @@ def deductableValue(firstValue, value): # "1458", "1465" ↦ 5 PRIVATE
 
     return value
 
-print(deductableValue("850", "1951"))
+print(deductableValue("1136", "1147"))
 
 
 def getDeductValue(firstValue, value): # PRIVATE
@@ -73,8 +76,6 @@ def getDeductValue(firstValue, value): # PRIVATE
     if (finalValue.isdigit()): finalValue = int(finalValue)
 
     return finalValue
-
-print(getDeductValue("850","1951"))
 
 
 
